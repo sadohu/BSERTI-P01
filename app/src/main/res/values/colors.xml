@@ -12,9 +12,9 @@
     <color name="card">#E8E3E3</color>
     <color name="btn_color">#54A32B</color>
     <color name="toggle_color">#1644A1</color>
-    ***estos 3 ultimos
-    <color name="colorPrimary">#1644A1</color>
-    <color name="colorPrimaryDark">#1B3F89</color>
-    <color name="colorAccent">#802196F3</color>
+    <!--estos 3 ultimos-->
+    <color name="colorPrimary">#3B5B9C</color>
+    <color name="colorPrimaryDark">#254587</color>
+    <color name="colorAccent">#8039A3F8</color>
 
 </resources>

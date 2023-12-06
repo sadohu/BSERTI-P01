@@ -1,5 +1,6 @@
 package com.example.session_01
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -9,6 +10,7 @@ import com.example.session_01.databinding.ActivityLoginBinding
 import com.example.session_01.domain.entity.LoginUser
 import com.example.session_01.domain.entity.User
 import com.example.session_01.presentation.LoginViewModel
+import com.example.session_01.presentation.MainActivity
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding : ActivityLoginBinding
@@ -19,6 +21,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.hide()
         initValues()
         initObservers()
     }
@@ -48,7 +51,9 @@ class LoginActivity : AppCompatActivity() {
             if(user.IDUsuario.isNullOrEmpty()){
                 Toast.makeText(this, user.Respuesta, Toast.LENGTH_LONG).show()
             }else{
-                Toast.makeText(this, user.Respuesta, Toast.LENGTH_LONG).show()
+//                Toast.makeText(this, user.Respuesta, Toast.LENGTH_LONG).show()
+                startActivity(Intent(this, MainActivity::class.java))
+                finish()
             }
         }
     }

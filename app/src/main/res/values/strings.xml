@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">session_01</string>
+    <string name="aprobracion_requerimientos">Aprobración de Requerimientos</string>
+    <string name="login_aplicacion">LOGIN DE APLICACIÓN</string>
+    <string name="usuario">Usuario</string>
+    <string name="password">Password</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="v_1_0">v 1.0</string>
 </resources>

@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="LOGIN DE APLICACIÓN"
+            android:text="@string/login_aplicacion"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"/>
@@ -40,7 +40,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Usuario"
+            android:text="@string/usuario"
             android:textColor="@color/white"
             android:textSize="14sp"/>
 
@@ -80,7 +80,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Password"
+            android:text="@string/password"
             android:textColor="@color/white"
             android:textSize="14sp"/>
 
@@ -132,7 +132,7 @@
             android:textSize="16sp"
             android:textColor="@color/white"
             android:backgroundTint="@color/btn_color"
-            android:text="Ingresar"/>
+            android:text="@string/ingresar"/>
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -146,7 +146,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="v 1.0"
+            android:text="@string/v_1_0"
             android:textColor="@color/white" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
