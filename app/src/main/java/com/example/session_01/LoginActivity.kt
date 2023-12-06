@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
+import com.example.session_01.data.preference.PreferenceUser
 import com.example.session_01.databinding.ActivityLoginBinding
 import com.example.session_01.domain.entity.LoginUser
 import com.example.session_01.domain.entity.User
@@ -19,6 +20,13 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // User logged
+        if (PreferenceUser.getPreferenceUser(applicationContext) != null){
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
+
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
@@ -51,9 +59,10 @@ class LoginActivity : AppCompatActivity() {
             if(user.IDUsuario.isNullOrEmpty()){
                 Toast.makeText(this, user.Respuesta, Toast.LENGTH_LONG).show()
             }else{
-//                Toast.makeText(this, user.Respuesta, Toast.LENGTH_LONG).show()
-                startActivity(Intent(this, MainActivity::class.java))
-                finish()
+                if (PreferenceUser.setPreferenceUser(applicationContext, user) == 1){
+                    startActivity(Intent(this, MainActivity::class.java))
+                    finish()
+                }
             }
         }
     }

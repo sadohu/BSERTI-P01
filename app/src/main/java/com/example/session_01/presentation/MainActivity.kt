@@ -2,11 +2,11 @@ package com.example.session_01.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import com.example.session_01.R
+import com.example.session_01.data.preference.PreferenceUser
 import com.example.session_01.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -21,7 +21,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initValues(){
-
+        var user = PreferenceUser.getPreferenceUser(this)!!
+        supportActionBar?.title = "Usuario: ${user.IDUsuario} - BSERTI MOBILE"
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
