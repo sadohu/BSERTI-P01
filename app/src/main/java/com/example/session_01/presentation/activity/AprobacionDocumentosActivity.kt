@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.session_01.R
 import com.example.session_01.databinding.ActivityAprobacionDocumentosBinding
+import com.example.session_01.presentation.adapter.AprobacionDocumentosAdapter
 
 class AprobacionDocumentosActivity : AppCompatActivity() {
     private lateinit var binding : ActivityAprobacionDocumentosBinding
+    private lateinit var aprobacionDocsAdapter : AprobacionDocumentosAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
