@@ -10,8 +10,8 @@ import com.example.session_01.data.preference.PreferenceUser
 import com.example.session_01.databinding.ActivityLoginBinding
 import com.example.session_01.domain.entity.LoginUser
 import com.example.session_01.domain.entity.User
-import com.example.session_01.presentation.LoginViewModel
-import com.example.session_01.presentation.MainActivity
+import com.example.session_01.domain.viewModel.LoginViewModel
+import com.example.session_01.presentation.activity.MainActivity
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding : ActivityLoginBinding
@@ -38,10 +38,10 @@ class LoginActivity : AppCompatActivity() {
         loginViewModel = ViewModelProvider(this)[LoginViewModel::class.java]
 
         binding.btnIngresar.setOnClickListener {
-            var username = binding.etUsuario.text;
-            var password = binding.etPassword.text;
+            val username = binding.etUsuario.text
+            val password = binding.etPassword.text
             println("Usuario: $username, Password: $password")
-            var loginUser = LoginUser()
+            val loginUser = LoginUser()
             loginUser.Usuario = username.toString()
             loginUser.Clave = password.toString()
             loginUser.IDCompania = 1

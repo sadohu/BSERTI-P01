@@ -1,4 +1,4 @@
-package com.example.session_01.presentation
+package com.example.session_01.domain.viewModel
 
 import android.app.Application
 import android.util.Log
