@@ -1,10 +1,10 @@
 package com.example.session_01.presentation.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import com.example.session_01.R
 import com.example.session_01.data.preference.PreferenceUser
 import com.example.session_01.databinding.ActivityMainBinding
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.mainMenu_aprobacionRequerimientos -> {
-                Toast.makeText(this, "Seleccionó Aprobación de Requerimientos", Toast.LENGTH_LONG).show()
+                startActivity(Intent(this, AprobacionDocumentosActivity::class.java))
             }
         }
         return super.onOptionsItemSelected(item)

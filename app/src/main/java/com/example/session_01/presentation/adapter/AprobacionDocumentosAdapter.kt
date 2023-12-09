@@ -1,5 +1,6 @@
 package com.example.session_01.presentation.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.OnClickListener
@@ -10,7 +11,7 @@ import com.example.session_01.R
 import com.example.session_01.domain.entity.AprobacionDocumento
 
 class AprobacionDocumentosAdapter (
-    var items: List<AprobacionDocumento>,
+    var items: MutableList<AprobacionDocumento>,
     var iCard: ICard) : RecyclerView.Adapter<AprobacionDocumentosAdapter.ViewHolder>() {
 
     interface ICard{
@@ -46,5 +47,12 @@ class AprobacionDocumentosAdapter (
 
     override fun getItemCount(): Int {
         return items.size
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun update(newItems : List<AprobacionDocumento>){
+        this.items.clear()
+        this.items.addAll(newItems)
+        notifyDataSetChanged()
     }
 }
