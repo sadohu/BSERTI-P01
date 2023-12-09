@@ -20,8 +20,8 @@ class AprobacionDocumentosAdapter (
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), OnClickListener {
         val tvNumeroDocumento: TextView = itemView.findViewById(R.id.item_aprobacion_documentos_tvNumero)
-        val tvEstadoDocumento: TextView = itemView.findViewById(R.id.item_aprobacion_documentos_tvEstado)
         val tvTipoDocumento: TextView = itemView.findViewById(R.id.item_aprobacion_documentos_tvTipoDocumento)
+        val tvEstadoDocumento: TextView = itemView.findViewById(R.id.item_aprobacion_documentos_tvEstado)
         val tvFechaDocumento: TextView = itemView.findViewById(R.id.item_aprobacion_documentos_tvFecha)
 
         init {
@@ -40,9 +40,9 @@ class AprobacionDocumentosAdapter (
     override fun onBindViewHolder(holder: AprobacionDocumentosAdapter.ViewHolder, position: Int) {
         val item = items[position]
         holder.tvNumeroDocumento.text = item.NumeroDocumento
-        holder.tvEstadoDocumento.text = item.EstadoItem
         holder.tvTipoDocumento.text = item.TipoDocumento
-        holder.tvFechaDocumento.text = item.FechaRegistro
+        holder.tvEstadoDocumento.text = item.Observacion
+        holder.tvFechaDocumento.text = item.HoraRegistro
     }
 
     override fun getItemCount(): Int {

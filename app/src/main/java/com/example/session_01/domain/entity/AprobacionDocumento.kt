@@ -1,6 +1,8 @@
 package com.example.session_01.domain.entity
 
-class AprobacionDocumento {
+import java.io.Serializable
+
+class AprobacionDocumento : Serializable {
     var Id : Int = 0
     var NumeroDocumento : String = ""
     var TipoDocumento : String = ""

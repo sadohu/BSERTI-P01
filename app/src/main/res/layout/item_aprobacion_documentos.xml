@@ -42,7 +42,7 @@
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="@string/tipoDocumento"
+                android:text="@string/documento"
                 android:textStyle="bold"/>
             <TextView
                 android:id="@+id/item_aprobacion_documentos_tvTipoDocumento"

@@ -1,5 +1,6 @@
 package com.example.session_01.presentation.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
@@ -54,7 +55,9 @@ class AprobacionDocumentosActivity : AppCompatActivity(), AprobacionDocumentosAd
     }
 
     override fun onCardClick(item: AprobacionDocumento) {
-        TODO("Not yet implemented")
+        startActivity(Intent(this, DetalleAprobacionDocumentoActivity::class.java).apply {
+            putExtra("aprobacionDocumento", item)
+        } )
     }
 
 
