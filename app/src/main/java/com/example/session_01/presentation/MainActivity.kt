@@ -16,13 +16,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.show()
         initValues()
     }
 
     private fun initValues(){
-        var user = PreferenceUser.getPreferenceUser(this)!!
+        // Cambiar el título de la barra de navegación y mostrarla
+        val user = PreferenceUser.getPreferenceUser(this)!!
         supportActionBar?.title = "Usuario: ${user.IDUsuario} - BSERTI MOBILE"
+        supportActionBar?.show()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
