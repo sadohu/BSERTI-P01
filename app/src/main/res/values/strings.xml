@@ -6,4 +6,14 @@
     <string name="password">Password</string>
     <string name="ingresar">Ingresar</string>
     <string name="v_1_0">v 1.0</string>
+    <string name="numero">Número</string>
+    <string name="draft_nombre">draft_nombre</string>
+    <string name="draft_tipoDocumento">draft_tipoDocumento</string>
+    <string name="tipoDocumento">Documento</string>
+    <string name="estado">Estado</string>
+    <string name="draft_estado">draft_estado</string>
+    <string name="descripcion">Descripción</string>
+    <string name="draft_descripcion">draft_descripcion</string>
+    <string name="fecha">Fecha</string>
+    <string name="draft_fecha">draft_fecha</string>
 </resources>
