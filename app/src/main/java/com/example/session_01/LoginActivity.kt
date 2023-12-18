@@ -14,15 +14,15 @@ import com.example.session_01.domain.viewModel.LoginViewModel
 import com.example.session_01.presentation.activity.MainActivity
 
 class LoginActivity : AppCompatActivity() {
-    private lateinit var binding : ActivityLoginBinding
-    private lateinit var loginViewModel : LoginViewModel
+    private lateinit var binding: ActivityLoginBinding
+    private lateinit var loginViewModel: LoginViewModel
     private lateinit var user: User
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         // User logged
-        if (PreferenceUser.getPreferenceUser(applicationContext) != null){
+        if (PreferenceUser.getPreferenceUser(applicationContext) != null) {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
@@ -34,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
         initObservers()
     }
 
-    private fun initValues(){
+    private fun initValues() {
         loginViewModel = ViewModelProvider(this)[LoginViewModel::class.java]
 
         binding.btnIngresar.setOnClickListener {
@@ -52,14 +52,14 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
-    private fun initObservers(){
-    loginViewModel.userLogin.observe(this){
+    private fun initObservers() {
+        loginViewModel.userLogin.observe(this) {
             print("Resultado: $it")
             user = it
-            if(user.IDUsuario.isNullOrEmpty()){
+            if (user.IDUsuario.isNullOrEmpty()) {
                 Toast.makeText(this, user.Respuesta, Toast.LENGTH_LONG).show()
-            }else{
-                if (PreferenceUser.setPreferenceUser(applicationContext, user) == 1){
+            } else {
+                if (PreferenceUser.setPreferenceUser(applicationContext, user) == 1) {
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()
                 }
@@ -67,11 +67,11 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun mensajeGuardar(message : String){
+    private fun mensajeGuardar(message: String) {
         AlertDialog.Builder(this)
             .setTitle("Guadar Cliente")
             .setMessage(message)
-            .setNeutralButton("Ok"){dialog,_->
+            .setNeutralButton("Ok") { dialog, _ ->
                 finish()
             }
             .setCancelable(false)

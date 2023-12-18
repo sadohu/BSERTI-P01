@@ -13,13 +13,13 @@ import retrofit2.http.Query
 interface ApiService {
     // Login
     @POST("api/Consulta/fn_Login")
-    suspend fun loginUser(@Body loginUser: LoginUser) : User
+    suspend fun loginUser(@Body loginUser: LoginUser): User
 
     // Aprobación de documentos
     @POST("api/Consulta/fn_PendienteAprobacion")
-    suspend fun getAprobacionDocumentos(@Body user : User) : List<AprobacionDocumento>
+    suspend fun getAprobacionDocumentos(@Body user: User): List<AprobacionDocumento>
 
     // Envio de imagenes
     @POST("api/Consulta/fn_EnviarImagen")
-    suspend fun uploadImage(@Body aprobacionDocumento: AprobacionDocumento) : Response<ResponseBody>
+    suspend fun uploadImage(@Body aprobacionDocumento: AprobacionDocumento): Response<ResponseBody>
 }

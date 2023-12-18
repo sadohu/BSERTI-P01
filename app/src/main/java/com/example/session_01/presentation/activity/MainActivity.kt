@@ -10,7 +10,7 @@ import com.example.session_01.data.preference.PreferenceUser
 import com.example.session_01.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding : ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         initValues()
     }
 
-    private fun initValues(){
+    private fun initValues() {
         // Cambiar el título de la barra de navegación y mostrarla
         val user = PreferenceUser.getPreferenceUser(this)!!
         supportActionBar?.title = "Usuario: ${user.IDUsuario} - BSERTI MOBILE"
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
+        when (item.itemId) {
             R.id.mainMenu_aprobacionRequerimientos -> {
                 startActivity(Intent(this, AprobacionDocumentosActivity::class.java))
             }

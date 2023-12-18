@@ -1,84 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="11.5dp"
     android:layout_marginStart="18.5dp"
+    android:layout_marginTop="11.5dp"
     android:layout_marginEnd="18.5dp"
     android:layout_marginBottom="11.5dp"
-    app:cardElevation="5dp"
     app:cardCornerRadius="15dp"
+    app:cardElevation="5dp"
     app:cardPreventCornerOverlap="false">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="22dp"
-        android:layout_marginBottom="22dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="22dp"
+        android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="@string/numero"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/item_aprobacion_documentos_tvNumero"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/draft_nombre"/>
+                android:text="@string/draft_nombre" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="@string/documento"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/item_aprobacion_documentos_tvTipoDocumento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/draft_tipoDocumento"/>
+                android:text="@string/draft_tipoDocumento" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="@string/estado"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/item_aprobacion_documentos_tvEstado"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/draft_estado"/>
+                android:text="@string/draft_estado" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="@string/fecha"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/item_aprobacion_documentos_tvFecha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/draft_fecha"/>
+                android:text="@string/draft_fecha" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.appcompat.widget.LinearLayoutCompat>

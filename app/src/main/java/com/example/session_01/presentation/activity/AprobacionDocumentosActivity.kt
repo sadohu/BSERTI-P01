@@ -12,10 +12,10 @@ import com.example.session_01.domain.viewModel.AprobracionDocumentoViewModel
 import com.example.session_01.presentation.adapter.AprobacionDocumentosAdapter
 
 class AprobacionDocumentosActivity : AppCompatActivity(), AprobacionDocumentosAdapter.ICard {
-    private lateinit var binding : ActivityAprobacionDocumentosBinding
-    private lateinit var aprobacionDocsAdapter : AprobacionDocumentosAdapter
-    private var lstAprobacionDocs : MutableList<AprobacionDocumento> = ArrayList()
-    private lateinit var aprobracionDocViewModel : AprobracionDocumentoViewModel
+    private lateinit var binding: ActivityAprobacionDocumentosBinding
+    private lateinit var aprobacionDocsAdapter: AprobacionDocumentosAdapter
+    private var lstAprobacionDocs: MutableList<AprobacionDocumento> = ArrayList()
+    private lateinit var aprobracionDocViewModel: AprobracionDocumentoViewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +26,7 @@ class AprobacionDocumentosActivity : AppCompatActivity(), AprobacionDocumentosAd
         initObservers()
     }
 
-    private fun initValues(){
+    private fun initValues() {
         // Cambiar el título de la barra de navegación y mostrarla
         supportActionBar?.title = "Aprobación de Documentos"
         supportActionBar?.show()
@@ -48,8 +48,8 @@ class AprobacionDocumentosActivity : AppCompatActivity(), AprobacionDocumentosAd
 
     }
 
-    private fun initObservers(){
-        aprobracionDocViewModel.listAprobacionDocumento.observe(this){
+    private fun initObservers() {
+        aprobracionDocViewModel.listAprobacionDocumento.observe(this) {
             aprobacionDocsAdapter.update(it)
         }
     }
@@ -57,7 +57,7 @@ class AprobacionDocumentosActivity : AppCompatActivity(), AprobacionDocumentosAd
     override fun onCardClick(item: AprobacionDocumento) {
         startActivity(Intent(this, DetalleAprobacionDocumentoActivity::class.java).apply {
             putExtra("aprobacionDocumento", item)
-        } )
+        })
     }
 
 

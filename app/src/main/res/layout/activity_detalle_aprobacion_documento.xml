@@ -274,15 +274,15 @@
                 android:id="@+id/btnImagen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/toggle_color"
                 android:letterSpacing="0.08"
                 android:padding="10dp"
                 android:text="@string/subir_foto"
                 android:textAllCaps="false"
                 app:cornerRadius="10dp"
-                android:backgroundTint="@color/toggle_color"
-                app:icon="@drawable/ic_search_image"/>
+                app:icon="@drawable/ic_search_image" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.constraintlayout.widget.ConstraintLayout>

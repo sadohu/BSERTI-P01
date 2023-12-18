@@ -12,20 +12,20 @@ import com.example.session_01.domain.entity.User
 import kotlinx.coroutines.launch
 import okhttp3.ResponseBody
 
-class AprobracionDocumentoViewModel(application: Application) : AndroidViewModel(application){
+class AprobracionDocumentoViewModel(application: Application) : AndroidViewModel(application) {
     private var repository = AprobacionDocumentoRepository(application)
 
     private var _listAprobacionDocumento = MutableLiveData<List<AprobacionDocumento>>()
-    val listAprobacionDocumento : LiveData<List<AprobacionDocumento>> = _listAprobacionDocumento
+    val listAprobacionDocumento: LiveData<List<AprobacionDocumento>> = _listAprobacionDocumento
 
     private var _uploadImage = MutableLiveData<String>()
-    val uploadImage : LiveData<String> = _uploadImage
+    val uploadImage: LiveData<String> = _uploadImage
 
-    fun getListAprobacionDocumento (user : User) = viewModelScope.launch {
+    fun getListAprobacionDocumento(user: User) = viewModelScope.launch {
         try {
             val result = repository.getAprobacionDocumentos(user)
             _listAprobacionDocumento.postValue(result)
-        }catch (e: Exception){
+        } catch (e: Exception) {
             Log.d("Error: ", e.message.toString())
         }
     }

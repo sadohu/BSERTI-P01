@@ -54,7 +54,8 @@ class DetalleAprobacionDocumentoActivity : AppCompatActivity() {
 
     private fun initValues() {
         // Inicializar el ViewModel
-        aprobracionDocumentoViewModel = ViewModelProvider(this)[AprobracionDocumentoViewModel::class.java]
+        aprobracionDocumentoViewModel =
+            ViewModelProvider(this)[AprobracionDocumentoViewModel::class.java]
 
         // Cambiar el título de la barra de navegación y mostrarla
         supportActionBar?.title = "Detalle de Aprobación"
@@ -100,8 +101,8 @@ class DetalleAprobacionDocumentoActivity : AppCompatActivity() {
         }
     }
 
-    private fun initObservers(){
-        aprobracionDocumentoViewModel.uploadImage.observe(this){
+    private fun initObservers() {
+        aprobracionDocumentoViewModel.uploadImage.observe(this) {
             println(it)
         }
     }
