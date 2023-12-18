@@ -13,4 +13,5 @@ class AprobacionDocumento : Serializable {
     var FechaRegistro  : String = ""
     var HoraRegistro  : String = ""
     var Observacion : String = ""
+    var Imagen : String = ""
 }

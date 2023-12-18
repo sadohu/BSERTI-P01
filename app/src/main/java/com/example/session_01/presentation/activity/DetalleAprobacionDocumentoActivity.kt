@@ -12,12 +12,16 @@ import android.provider.MediaStore
 import android.util.Base64
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import com.example.session_01.databinding.ActivityDetalleAprobacionDocumentoBinding
 import com.example.session_01.domain.entity.AprobacionDocumento
+import com.example.session_01.domain.viewModel.AprobracionDocumentoViewModel
 import java.io.ByteArrayOutputStream
 
 class DetalleAprobacionDocumentoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetalleAprobacionDocumentoBinding
+    private lateinit var aprobracionDocumentoViewModel: AprobracionDocumentoViewModel
     private val PICK_IMAGE_REQUEST = 1
     private val MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 1
 
@@ -26,6 +30,8 @@ class DetalleAprobacionDocumentoActivity : AppCompatActivity() {
         binding = ActivityDetalleAprobacionDocumentoBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initValues()
+        initEvents()
+        initObservers()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -47,6 +53,9 @@ class DetalleAprobacionDocumentoActivity : AppCompatActivity() {
     }
 
     private fun initValues() {
+        // Inicializar el ViewModel
+        aprobracionDocumentoViewModel = ViewModelProvider(this)[AprobracionDocumentoViewModel::class.java]
+
         // Cambiar el título de la barra de navegación y mostrarla
         supportActionBar?.title = "Detalle de Aprobación"
         supportActionBar?.show()
@@ -66,8 +75,6 @@ class DetalleAprobacionDocumentoActivity : AppCompatActivity() {
         binding.tvFechaRegistro.text = aprobacionDocumento.FechaRegistro
         binding.tvHoraRegistro.text = aprobacionDocumento.HoraRegistro
         binding.tvObservacion.text = aprobacionDocumento.Observacion
-
-        initEvents()
 
     }
 
@@ -90,6 +97,12 @@ class DetalleAprobacionDocumentoActivity : AppCompatActivity() {
                     Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
                 startActivityForResult(intent, PICK_IMAGE_REQUEST)
             }
+        }
+    }
+
+    private fun initObservers(){
+        aprobracionDocumentoViewModel.uploadImage.observe(this){
+            println(it)
         }
     }
 
