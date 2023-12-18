@@ -32,4 +32,5 @@
     <string name="observacion">Observación</string>
     <string name="draft_observacion">draft_observacion</string>
     <string name="exportarPdf">Exportar en PDF</string>
+    <string name="subir_foto">Subir imagen</string>
 </resources>

@@ -9,8 +9,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp">
         <!--Info-->
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -25,30 +25,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/numero"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/tvNumero"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/draft_numero"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"/>
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnNumero"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/draft_numero"
-                    android:textAllCaps="false"
-                    android:letterSpacing="0.08"
-                    android:layout_marginBottom="10dp"
-                    android:padding="10dp"
-                    app:cornerRadius="10dp"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+                <!--                <com.google.android.material.button.MaterialButton-->
+                <!--                    android:id="@+id/btnNumero"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="@string/draft_numero"-->
+                <!--                    android:textAllCaps="false"-->
+                <!--                    android:letterSpacing="0.08"-->
+                <!--                    android:layout_marginBottom="10dp"-->
+                <!--                    android:padding="10dp"-->
+                <!--                    app:cornerRadius="10dp"/>-->
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <!--TipoDocumento-->
@@ -57,20 +59,22 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/tipoDocumento"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/tvTipoDocumento"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/draft_tipoDocumento"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <!--Abreviacion-->
@@ -79,20 +83,22 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/abrevacion"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/tvAbrevacion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/draft_abrevacion"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <!--EstadoItem-->
@@ -101,20 +107,22 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/estadoItem"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/tvEstadoItem"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/draft_estadoItem"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <!--Descripcion-->
@@ -123,20 +131,22 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/descripcion"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/tvDescripcion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/draft_descripcion"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <!--UsuarioRegistro-->
@@ -145,20 +155,22 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/usuarioRegistro"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/tvUsuarioRegistro"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/draft_usuarioRegistro"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <!--FechaRegistro-->
@@ -167,20 +179,22 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/fechaRegistro"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/tvFechaRegistro"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/draft_fechaRegistro"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <!--HoraRegistro-->
@@ -189,20 +203,22 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/horaRegistro"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/tvHoraRegistro"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/draft_horaRegistro"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <!--HoraRegistro-->
@@ -211,20 +227,22 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/observacion"
+                    android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/tvObservacion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/draft_observacion"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -235,21 +253,37 @@
             android:id="@+id/lycBoton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="28dp"
+            android:layout_marginEnd="20dp"
             android:elevation="10dp"
+            android:orientation="vertical"
             app:layout_constraintTop_toBottomOf="@id/lycInfo">
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnRegistrar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/red"
+                android:letterSpacing="0.08"
                 android:text="@string/exportarPdf"
                 android:textAllCaps="false"
+                app:cornerRadius="10dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnImagen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
                 android:letterSpacing="0.08"
-                android:backgroundTint="@color/red"
-                app:cornerRadius="10dp"/>
+                android:padding="10dp"
+                android:text="@string/subir_foto"
+                android:textAllCaps="false"
+                app:cornerRadius="10dp"
+                android:backgroundTint="@color/toggle_color"
+                app:icon="@drawable/ic_search_image"/>
+
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
