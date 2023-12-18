@@ -22,8 +22,11 @@ import java.io.ByteArrayOutputStream
 class DetalleAprobacionDocumentoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetalleAprobacionDocumentoBinding
     private lateinit var aprobracionDocumentoViewModel: AprobracionDocumentoViewModel
+
+    private var idDocumento: Int = 0
     private val PICK_IMAGE_REQUEST = 1
     private val MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 1
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +52,13 @@ class DetalleAprobacionDocumentoActivity : AppCompatActivity() {
             val base64Image = convertBitmapToBase64(bitmap)
 
             println("Holi\n $base64Image")
+
+            // Enviar la imagen al servidor
+            var documento = AprobacionDocumento()
+            documento.Id = idDocumento
+            documento.Imagen = base64Image
+
+            aprobracionDocumentoViewModel.uploadImage(documento)
         }
     }
 
@@ -64,6 +74,9 @@ class DetalleAprobacionDocumentoActivity : AppCompatActivity() {
         // Obtener el objeto enviado desde la actividad anterior
         val aprobacionDocumento =
             intent.getSerializableExtra("aprobacionDocumento") as AprobacionDocumento
+
+        // Caputar el id del documento
+        idDocumento = aprobacionDocumento.Id
 
         // Mostrar los datos en los componentes
         binding.tvNumero.text = aprobacionDocumento.NumeroDocumento
